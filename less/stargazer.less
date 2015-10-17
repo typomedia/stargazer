@@ -1,0 +1,202 @@
+@coolgray: #333;
+@darkblue: #074e68;
+@lightblue: #085a78;
+
+html, body {
+  height: 100%
+}
+
+div.off-canvas-wrap {
+  height: auto;
+  min-height: 100%;
+}
+
+div.inner-wrap {
+  margin-bottom: 40px;
+}
+
+footer#footer {
+  background: @coolgray;
+  padding: 10px 0;
+  line-height: 2.8125rem;
+  height: 40px;
+  margin-top: -40px;
+  margin-bottom: 0;
+  overflow: visible;
+  position: relative;
+}
+
+@media screen and (max-width: 980px) {
+  footer#footer {
+    display: block;
+    position: relative;
+    margin-top: inherit;
+    width: 100%;
+    height: auto;
+  }
+  
+  div.inner-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.top-bar-section {
+  right: 0;
+}
+
+.sub-nav {
+  background-color: #f2f2f2;
+  padding: 10px 10px 10px 0;
+  margin: 0 0 1.125rem;
+}
+
+.sub-nav dt a, .sub-nav dd a, .sub-nav li a {
+  color: #008CBA;
+}
+
+footer#footer p {
+  color: #fff;
+  margin: 0;
+}
+
+.stage .yeti img {
+  max-width: 40%;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+.stage {
+  background: url(http://foundation.zurb.com/assets/img/marquee-stars.svg) #074e68;
+  min-height: 500px;
+  text-align: left;
+  position: relative;
+  padding: 60px 20px 0 20px;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.stage h1, 
+.stage h2, 
+.stage h3 {
+  color: #fff;
+}
+
+.intro,
+.outro {
+  background: @lightblue;
+  padding: 10px 0px;
+  height: auto;
+  border-bottom: 1px solid @coolgray;
+}
+
+.intro h3, 
+.intro h4,
+.intro p {
+  color: white;
+}
+
+.intro .button {
+  margin: 1em 0 0 0;
+}
+
+.main {
+  margin: 40px 0 40px;
+}
+
+.content {
+  margin: 20px 0 20px;
+}
+
+.blue {
+  color: white;
+  border-top: 1px solid @coolgray;
+  background: #074e68;
+
+  a {
+    font-weight: bold;
+    color: white;
+  }
+
+  h3, h4, h5 {
+    color: white;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.11111rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+    font-size: 0.88889rem;
+    background-color: #008CBA;
+    border-color: #007095;
+    color: #fff;
+    transition: background-color 300ms ease-out;
+}
+
+.meta {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+    padding: 0.2rem 0;
+}
+
+footer.tags {
+    a {
+        background: @darkblue;
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        padding: 0.45rem;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+        margin: 0 2rem 0 0;
+        text-decoration: none;
+        font-size: small;
+    }
+    a:hover {
+        background-color: @lightblue;
+    }
+    a:before {
+        background: #fff;
+        width: 8px;
+        height: 8px;
+        content: "";
+        display: inline-block;
+        border-radius: 100%;
+        margin: 0 5px 0 0;
+    }
+    a:after {
+        display: inline-block;
+        border: 16px solid;
+        border-color: transparent transparent transparent @darkblue;
+        height: 0;
+        width: 0;
+        position: absolute;
+        right: -32px;
+        top: 0;
+        content: "";
+        display: inline-block;
+    }
+    a:hover:after {
+        border-color: transparent transparent transparent @lightblue;
+    }
+}
+
+ 
+
