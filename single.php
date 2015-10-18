@@ -9,7 +9,7 @@
 
 <section class="main">
   <div class="row">
-    <div class="large-8 columns">
+    <div class="large-10 columns">
 
       <?php if (have_posts()) while (have_posts()) : the_post(); ?>
 
@@ -26,7 +26,7 @@
                 <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
                   <span class="fi-comment"><?php comments_popup_link(__('Leave a comment', 'twentyfourteen'), __('1 Comment', 'twentyfourteen'), __('% Comments', 'twentyfourteen')); ?></span>
                 <?php endif; ?>
-                <span class="fi-pencil"><?php edit_post_link(__('Edit', 'twentyfourteen'), '<span class="edit-link">', '</span>'); ?></span>
+                <?php edit_post_link(__('Edit', 'twentyfourteen'), '<span class="fi-pencil">', '</span>'); ?>
               </div>
             </header>
 
@@ -42,7 +42,7 @@
 
         <?php endwhile; ?>
     </div>
-    <aside class="large-4 columns">
+    <aside class="large-2 columns">
       <?php get_sidebar(); ?>
     </aside>
   </div>
