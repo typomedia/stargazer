@@ -1,0 +1,2 @@
+# stargazer
+Foundation WordPress Theme
