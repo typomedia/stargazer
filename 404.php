@@ -7,10 +7,12 @@
 
 <?php get_header(); ?>
 
-	<section id="content">
+<section class="main">
+  <div class="row">
+    <div class="large-12 columns">
 
-		<article id="post-0" class="post error404 not-found">
-			<header class="entry-header">
+		<article id="post-<?php the_ID(); ?>" class="post error404 not-found">
+			<header>
 				<h1 class="entry-title"><?php _e( 'The requested page does not exist.', 'textura' ); ?></h1>
 			</header>
 
@@ -36,8 +38,9 @@
 				</div><!-- .widget -->
 
 			</div><!-- .entry-content -->
-		</article><!-- #post-0 -->
+		</article>
 
-	</section><!-- #content -->
-
+  </div>
+</section>
+</div></div>
 <?php get_footer(); ?>
