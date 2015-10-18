@@ -15,7 +15,7 @@
 
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
             <header>
-              <div class="categories">
+              <div class="category">
                 <span class="radius secondary label"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen')); ?></span>
               </div>
               <h1 class="title"><?php the_title(); ?></h1>
@@ -24,7 +24,7 @@
                 <span class="fi-calendar"><?php the_time('j F Y'); ?></span>
                 <span class="fi-torso"><?php the_author_link(); ?></span>
                 <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-                <span class="fi-comment"><?php comments_popup_link(__('Leave a comment', 'twentyfourteen'), __('1 Comment', 'twentyfourteen'), __('% Comments', 'twentyfourteen')); ?></span>
+                  <span class="fi-comment"><?php comments_popup_link(__('Leave a comment', 'twentyfourteen'), __('1 Comment', 'twentyfourteen'), __('% Comments', 'twentyfourteen')); ?></span>
                 <?php endif; ?>
                 <span class="fi-pencil"><?php edit_post_link(__('Edit', 'twentyfourteen'), '<span class="edit-link">', '</span>'); ?></span>
               </div>
