@@ -32,7 +32,7 @@
 
             <div class="content">
               <?php the_content(); ?>
-              <?php wp_link_pages(array('before' => '<div class="page-link">' . __('Pages:', 'textura'), 'after' => '</div>')); ?>
+              <?php wp_link_pages(array('before' => '<div class="page-link">' . __('Pages:', 'stargazer'), 'after' => '</div>')); ?>
             </div>
 
             <?php the_tags('<footer class="tags">', '', '</footer>'); ?>

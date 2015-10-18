@@ -5,19 +5,19 @@
  */
 ?>
 
-	<aside id="sidebar" class="marginalia" role="complementary">
+	<aside id="sidebar" role="complementary">
 
 		<?php if ( ! dynamic_sidebar( 'Sidebar' ) ) : ?>
 
 			<section id="archives" class="widget">
-				<h3 class="widget-title"><?php _e('Archives', 'textura'); ?></h3>
+				<h3><?php _e('Archives', 'stargazer'); ?></h3>
 				<ul>
 					<?php wp_get_archives( array('type' => 'monthly') ); ?>
 				</ul>
 			</section>
 
 			<section id="meta" class="widget">
-				<h3 class="widget-title"><?php _e( 'Meta', 'textura' ); ?></h3>
+				<h3><?php _e( 'Meta', 'stargazer' ); ?></h3>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>
@@ -27,4 +27,4 @@
 			
 		<?php endif; ?>
 
-	</aside><!-- #sidebar -->
+	</aside>

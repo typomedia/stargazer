@@ -5,7 +5,7 @@
  */
 
 // Language support
-load_theme_textdomain( 'textura', TEMPLATEPATH . '/languages' );
+load_theme_textdomain( 'stargazer', TEMPLATEPATH . '/languages' );
 
 $locale = get_locale();
 $locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -25,12 +25,12 @@ add_theme_support( 'automatic-feed-links' );
 // add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
 
 // This theme uses wp_nav_menu() in one location.
-register_nav_menu( 'primary', __( 'Primary Menu', 'textura' ) );
+register_nav_menu( 'primary', __( 'Primary Menu', 'stargazer' ) );
 	
 // Register widgetized area and update sidebar with default widgets
 function textura_widgets_init() {
 	register_sidebar( array (
-		'name' => __( 'Sidebar', 'textura' ),
+		'name' => __( 'Sidebar', 'stargazer' ),
 		'id' => 'sidebar',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget' => "</section><!-- .widget -->",
@@ -83,15 +83,15 @@ function textura_comment( $comment, $args, $depth ) {
 
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '<span class="says">%s:</span>', 'textura' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '<span class="says">%s:</span>', 'stargazer' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'textura' ); ?></p>
+					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'stargazer' ); ?></p>
 				<?php endif; ?>
 
-				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>"><?php printf( __( '%1$s at %2$s', 'textura' ), get_comment_date(),  get_comment_time() ); ?></time></a>
-				<?php edit_comment_link( __( '(Edit)', 'textura' ), ' ' ); ?>
+				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>"><?php printf( __( '%1$s at %2$s', 'stargazer' ), get_comment_date(),  get_comment_time() ); ?></time></a>
+				<?php edit_comment_link( __( '(Edit)', 'stargazer' ), ' ' ); ?>
 
 			</header><!-- .comment-meta -->
 
@@ -109,7 +109,7 @@ function textura_comment( $comment, $args, $depth ) {
 	?>
 
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'textura' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'textura'), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'stargazer' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'stargazer'), ' ' ); ?></p>
 	<?php
 		break;
 		endswitch;
