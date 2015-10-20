@@ -62,7 +62,8 @@
       <img src="<?php bloginfo( 'template_directory' ); ?>/img/hero-image.svg" />
 	</div>
     <div class="small-8 medium-8 columns">
-      <h1><?php the_title(); ?></h1><br>
+      <h1>Welcome to Stargazer</h1><br>
+<!--      <h1><?php the_title(); ?></h1><br>-->
     </div>
     <div class="small-12 medium-8 columns">
       <h3>The next responsive WordPress Theme <br class="hide-for-small"> on steroids made with ZURB's Foundation.</h3><br>
@@ -71,7 +72,7 @@
   </div>
   <div class="row">
     <div class="large-4 medium-6 columns">
-      <a href="http://phalconium.typomedia.org/docs" class="large button">Getting Started</a>
+      <a href="https://github.com/typomedia/stargazer" class="large button">Getting Started</a>
     </div>
   </div>
 </section>
@@ -83,7 +84,7 @@
       <h4 class="subheader">The most advanced responsive frontend framework in the world.</h4>
     </div>
     <div class="small-4 columns">
-      <a href="/foundation" class="button right">Check It Out!</a>
+      <a href="https://github.com/typomedia/stargazer" class="button right">Check It Out!</a>
 	</div>
   </div>
 </section>

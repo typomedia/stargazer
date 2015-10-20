@@ -6,49 +6,40 @@
 ?>
 
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  
+  <header>
+    <div class="category">
+      <span class="radius secondary label right"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'stargazer')); ?></span>
+    </div>
+    <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'stargazer' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'stargazer' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-		<?php if ( 'post' == $post->post_type ) : ?>
-
-		<address class="entry-meta">
-			<?php
-				printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a> <span class="sep"> by </span> <a class="url fn n" href="%4$s" title="%5$s">%6$s</a>', 'stargazer' ),
-					get_permalink(),
-					get_the_date( 'c' ),
-					get_the_date(),
-					get_author_posts_url( get_the_author_meta( 'ID' ) ),
-					sprintf( esc_attr__( 'View all posts by %s', 'stargazer' ), get_the_author() ),
-					get_the_author()
-				);
-			?>
-		</address><!-- .entry-meta -->
-
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    <?php if ( 'post' == $post->post_type ) : ?>
+      <div class="meta">
+        <span class="info"><span class="fi-calendar"></span><?php the_time('j F Y'); ?></span>
+        <span class="info"><span class="fi-torso"></span><?php the_author_link(); ?></span>
+        <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+        <span class="info"><span class="fi-comment"></span><?php comments_popup_link(__('Leave a comment', 'stargazer'), __('1 Comment', 'stargazer'), __('% Comments', 'stargazer')); ?></span>
+        <?php endif; ?>
+        <span class="info"><span class="fi-pencil"></span><?php edit_post_link(__('Edit', 'stargazer'), '', ''); ?></span>
+      </div>
+    <?php endif; ?>
+  </header>
 
 	<?php if ( is_search() ) : ?>
 
-	<article class="entry-summary">
+	<article class="content">
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'stargazer' ) ); ?>
-	</article><!-- .entry-summary -->
+	</article>
 
 	<?php else : ?>
 
-	<article class="entry-content">
+	<article class="content">
 		<?php the_excerpt(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'stargazer' ), 'after' => '</div>' ) ); ?>
-	</article><!-- .entry-content -->
+	</article>
 
 	<?php endif; ?>
 
-	<footer class="entry-meta">
-		<span class="cat-links"><?php _e( 'Posted in ', 'stargazer' ); ?> <?php the_category( ', ' ); ?></span>
-		<span class="sep"> | </span>
-		<?php the_tags( '', '<span class="sep">', '</span>' ); ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'stargazer' ), __( '1 Comment', 'stargazer' ), __( '% Comments', 'stargazer' ) ); ?></span>
-		<?php edit_post_link( __( 'Edit', 'stargazer' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
-	</footer><!-- #entry-meta -->
+	<?php the_tags('<footer class="tags">', '', '</footer>'); ?>
 
-</section><!-- #post-<?php the_ID(); ?> -->
+</section>

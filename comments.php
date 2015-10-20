@@ -5,15 +5,15 @@
  */
 ?>
 
-<div id="comments" class="comments-area">
+<section id="comments">
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h3>
 			<?php
 				printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'stargazer' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
-		</h2>
+		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above">
@@ -25,7 +25,7 @@
 
 		<ol class="commentlist">
 			<?php wp_list_comments( array( 'callback' => 'textura_comment' ) ); ?>
-		</ol><!-- .commentlist -->
+		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
@@ -43,4 +43,4 @@
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+</section>

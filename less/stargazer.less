@@ -40,8 +40,16 @@ footer#footer {
   }
 }
 
-.top-bar-section {
+section.top-bar-section {
   right: 0;
+  ul li:last-child > a {
+    background-color: #008CBA !important;
+  }
+}
+
+section.post {
+  border-bottom: 2px solid #eee;
+  padding: 0 0 20px;
 }
 
 .sub-nav {
@@ -157,46 +165,67 @@ input[type="submit"] {
 }
 
 footer.tags {
-    a {
-        background: @darkblue;
-        display: inline-block;
-        color: #fff;
-        position: relative;
-        padding: 0.45rem;
-        border-top-left-radius: 10%;
-        border-bottom-left-radius: 10%;
-        margin: 0 2rem 0 0;
-        text-decoration: none;
-        font-size: small;
-    }
-    a:hover {
-        background-color: @lightblue;
-    }
-    a:before {
-        background: #fff;
-        width: 8px;
-        height: 8px;
-        content: "";
-        display: inline-block;
-        border-radius: 100%;
-        margin: 0 5px 0 0;
-    }
-    a:after {
-        display: inline-block;
-        border: 16px solid;
-        border-color: transparent transparent transparent @darkblue;
-        height: 0;
-        width: 0;
-        position: absolute;
-        right: -32px;
-        top: 0;
-        content: "";
-        display: inline-block;
-    }
-    a:hover:after {
-        border-color: transparent transparent transparent @lightblue;
-    }
+  a {
+      background: @darkblue;
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      padding: 0.45rem;
+      border-top-left-radius: 10%;
+      border-bottom-left-radius: 10%;
+      margin: 0 2rem 0 0;
+      text-decoration: none;
+      font-size: small;
+  }
+  a:hover {
+      background-color: @lightblue;
+  }
+  a:before {
+      background: #fff;
+      width: 8px;
+      height: 8px;
+      content: "";
+      display: inline-block;
+      border-radius: 100%;
+      margin: 0 5px 0 0;
+  }
+  a:after {
+      display: inline-block;
+      border: 16px solid;
+      border-color: transparent transparent transparent @darkblue;
+      height: 0;
+      width: 0;
+      position: absolute;
+      right: -32px;
+      top: 0;
+      content: "";
+      display: inline-block;
+  }
+  a:hover:after {
+      border-color: transparent transparent transparent @lightblue;
+  }
 }
 
- 
+section#comments {
+  margin: 40px 0;
+  
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+  
+  div.vcard {
+    border: none;
+    padding: 0;
+  }
+}
+
+div.meta {
+  span.info {
+    margin-right: 10px;
+  }
+  span[class^="fi-"] {
+    margin-right: 5px;
+  }
+}
 

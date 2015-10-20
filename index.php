@@ -9,7 +9,7 @@
 
     <section class="main">
       <div class="row">
-        <div class="large-8 columns">
+        <div class="large-10 columns">
 
         <?php if ( have_posts() ) : ?>
 
@@ -44,7 +44,7 @@
           <?php endif; ?>			
 
         </div>
-        <aside class="large-4 columns">
+        <aside class="large-2 columns">
     <?php get_sidebar(); ?>
         </aside>
       </div>
